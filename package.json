@@ -1,0 +1,9 @@
+{
+  "name": "pokedex-interactivo",
+  "version": "1.0.0",
+  "description": "Template para proyectos de frontend dentro de https://codealo.dev",
+  "repository": "https://github.com/Codealo-Dev/pokedex-interactivo.git",
+  "author": "Codealo <johnnie@codealo.dev>",
+  "license": "MIT",
+  "private": false
+}
