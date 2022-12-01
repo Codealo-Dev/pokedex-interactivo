@@ -3,15 +3,11 @@ import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
 export interface HttpClientOptions {
   excludedUrls?: string[];
   global: AxiosRequestConfig;
-  optOutAuth?: boolean;
 }
 
 const axiosInstance = axios.create();
 
 export const useHttpClient = (options?: HttpClientOptions): AxiosInstance => {
-  if (!options?.optOutAuth) {
-
-
     axiosInstance.interceptors.response.use(undefined, async errorResponse => {
       const { status, statusText, data } = errorResponse.response;
 
@@ -26,7 +22,6 @@ export const useHttpClient = (options?: HttpClientOptions): AxiosInstance => {
         errorMessage: data?.message,
       };
     });
-  }
 
   return axiosInstance;
 };
